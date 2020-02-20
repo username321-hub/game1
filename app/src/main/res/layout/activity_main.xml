@@ -25,7 +25,7 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="72dp" />
+            android:layout_height="wrap_content" />
 
         <Space
             android:layout_width="match_parent"
@@ -34,23 +34,34 @@
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
-            android:layout_height="74dp"
+            android:layout_height="wrap_content"
+            android:onClick="button1"
             android:text="Ударить" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
-            android:layout_height="71dp"
+            android:layout_height="wrap_content"
+            android:onClick="button2"
             android:text="Использовать зелье!" />
 
-        <TextView
-            android:id="@+id/textView3"
+        <Button
+            android:id="@+id/button3"
             android:layout_width="match_parent"
-            android:layout_height="61dp" />
+            android:layout_height="wrap_content"
+            android:onClick="button3"
+            android:text="Пропустить ход" />
+
+        <TextView
+            android:id="@+id/HPview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
-            android:layout_height="92dp" />
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
