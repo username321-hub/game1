@@ -15,18 +15,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        if(zombie.life <=0){
-            textView4.setText("Выйграл")
-        }
-        if(player.HP <= 0){
-            textView4.setText("Проиграл")
-        }
     }
     fun button1(v:View){
         if(hod == 0){
-        zombie.life = player.beat(zombie.life,sword.damage)
+        zombie.life = player.beat(zombie.life,swordog.damage)
         hod = 1
-        textView2.setText("${zombie.life}")
+        HPview2.setText("${zombie.life}")
         }else{
             textView4.setText("Ты уже сделал движение!")
         }
@@ -47,6 +41,8 @@ class MainActivity : AppCompatActivity() {
         textView4.setText("Твой ход!")
         if(zombie.life <=0){
             textView4.setText("Выйграл")
+            player.zelkol = zombie.vipad( player.zelkol, player.lvl)
+            player.XP = zombie.pobed(player.XP,player.lvl)
         }
         if(player.HP <= 0){
             textView4.setText("Проиграл")

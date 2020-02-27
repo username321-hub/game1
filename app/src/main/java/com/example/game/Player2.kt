@@ -2,7 +2,8 @@ package com.example.game
 
 class Player2 (HP:Int, damag: Int){
     var HP = 100
-    var lvl = 1
+    var lvl : Int = 1
+    var XP = 0
     var damag = 10*lvl
     var zelkol = 3
     var rasst = 0
