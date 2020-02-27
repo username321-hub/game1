@@ -1,13 +1,17 @@
 package com.example.game
 
-class Enemy(life : Int, Damage : Int){
+class Enemy(life : Int, Damage : Int) {
     var life = 100
     var EnDamage = 10
-    fun  Beat(plhp : Int): Int{
+    fun Beat(plhp: Int): Int {
         var PLHP = plhp
-        PLHP -= EnDamage
+        if (life > 0) {
+            PLHP -= EnDamage
+        }
         return PLHP
     }
+
+
     fun vipad (Plzel : Int,PLlvl : Int  ):Int{
         var plzel = Plzel
 

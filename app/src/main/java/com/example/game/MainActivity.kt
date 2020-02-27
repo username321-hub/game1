@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
     fun button3(v:View){
         player.HP = zombie.Beat(player.HP)
         HPview.setText("${player.HP}")
+        player.lvl_Edit()
         hod = 0
         textView4.setText("Твой ход!")
         if(zombie.life <=0){

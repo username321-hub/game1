@@ -22,4 +22,9 @@ class Player2 (HP:Int, damag: Int){
             println("Нету зелья!")
         }
     }
+    fun lvl_Edit(){
+        if(XP >= lvl*20){
+            lvl+=1
+        }
+    }
 }
