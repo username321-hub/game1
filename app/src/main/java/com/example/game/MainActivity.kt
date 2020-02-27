@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         player.HP = zombie.Beat(player.HP)
         HPview.setText("${player.HP}")
         player.lvl_Edit(zombie.life)
+        textView4.setText("${player.inf1}")
         hod = 0
         textView4.setText("Твой ход!")
         textView2.setText("${player.lvl}")

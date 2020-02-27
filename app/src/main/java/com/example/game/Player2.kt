@@ -7,6 +7,7 @@ class Player2 (HP:Int, damag: Int){
     var damag = 10*lvl
     var zelkol = 3
     var rasst = 0
+    var inf1 = " "
     fun beat(HPvr : Int, Damagor: Int): Int{
         var hpvr = HPvr
         hpvr -= damag + Damagor
@@ -19,7 +20,7 @@ class Player2 (HP:Int, damag: Int){
             println(HP)
         }
         if(zelkol <= 0 ){
-            println("Нету зелья!")
+            inf1 = "Нету зелья!"
         }
     }
     fun lvl_Edit(ZHP: Int){
