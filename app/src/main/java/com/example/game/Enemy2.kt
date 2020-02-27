@@ -15,7 +15,7 @@ class Enemy(life : Int, Damage : Int) {
     fun vipad (Plzel : Int,PLlvl : Int  ):Int{
         var plzel = Plzel
 
-        if(PLlvl < 4){
+        if((PLlvl < 4)&&(life >0)){
         plzel +=1
 }
         return plzel

@@ -37,15 +37,17 @@ class MainActivity : AppCompatActivity() {
     fun button3(v:View){
         player.HP = zombie.Beat(player.HP)
         HPview.setText("${player.HP}")
-        player.lvl_Edit()
+        player.lvl_Edit(zombie.life)
         hod = 0
         textView4.setText("Твой ход!")
+        textView2.setText("${player.lvl}")
         if(zombie.life <=0){
             textView4.setText("Выйграл")
             player.zelkol = zombie.vipad( player.zelkol, player.lvl)
             player.XP = zombie.pobed(player.XP,player.lvl)
+            textView4.setText("Тебе выпало зелье и 10XP!")
         }
-        if(player.HP <= 0){
+        if(player.HP <=  0){
             textView4.setText("Проиграл")
         }
     }
