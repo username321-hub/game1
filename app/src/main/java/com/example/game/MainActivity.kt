@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     var swordog : Orog = Orog(10)
     var ortype = 1
     var hod = 0
+    var ice : orice = orice()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun button3(v:View){
+        ice.propusk(hod)
         player.HP = zombie.Beat(player.HP)
         HPview.setText("${player.HP}")
         player.lvl_Edit(zombie.life)
